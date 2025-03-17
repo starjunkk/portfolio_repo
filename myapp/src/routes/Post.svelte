@@ -1,22 +1,15 @@
 <script>
-    export let title;
-    export let description;
-    export let image;
-    export let tags;
+    export let work;
 </script>
 
 <div class="work-item">
     <div class="image">
-        <img src={image} alt={title} on:error={() => image = 'https://via.placeholder.com/1920x300?text=Image+Not+Found'} />
+        <img src={work.image} alt={work.title} on:error={() => image = 'https://via.placeholder.com/1920x300?text=Image+Not+Found'} />
     </div>
     <div class="text-content">
-        <h2>{title}</h2>
-        <p class="description">{description}</p>
-        <div class="tags">
-            {#each tags as tag}
-                <span class="tag">{tag}</span>
-            {/each}
-        </div>
+        <h2>{work.title}</h2>
+        <p class="description">{work.description}</p>
+       
     </div>
 </div>
 

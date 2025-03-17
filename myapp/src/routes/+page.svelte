@@ -4,6 +4,8 @@
 	let { data } = $props();
 </script>
 
+{JSON.stringify(data)}
+
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
@@ -13,7 +15,7 @@
 	<h1>Portfolio</h1>
 
 	<div class="posts">
-		{#each data.works as work (work.title)} 
+		{#each data.works as work} 
 			<Post work={work}></Post>
 		{/each}
 	</div>

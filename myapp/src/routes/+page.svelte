@@ -4,8 +4,6 @@
 	let { data } = $props();
 </script>
 
-{JSON.stringify(data)}
-
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
